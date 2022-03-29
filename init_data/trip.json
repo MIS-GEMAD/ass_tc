@@ -1,0 +1,74 @@
+{
+  "trips" : [
+    {
+    "_id": "507f191e810c19729de860ea",
+    "ticker": "20220309-R",
+    "title": "do ullamco",
+    "description": "Est incididunt consequat quis consectetur eu consequat.",
+    "price": 3.55,
+    "requirements": [
+      "Amet do tempor proident aute sit culpa aliqua est sit est irure.",
+      "Enim exercitation labore aliqua mollit."
+    ],
+    "startDate": "2022-11-26T00:38:57.906Z",
+    "endDate": "2023-02-22T23:45:30.730Z",
+    "is_cancelled": "false",
+    "is_published": "false",
+    "stages": [
+      {
+        "_id": "6228bdde9d162bba1414af0f",
+        "title": "enim sunt",
+        "description": "Eu reprehenderit et veniam ad ad in ea laboris excepteur excepteur.",
+        "price": 1.61
+      },
+      {
+        "_id": "6228bddee40003520e53cd12",
+        "title": "occaecat proident",
+        "description": "Cupidatat ipsum sunt consectetur ea et aute dolore officia est enim enim excepteur excepteur nostrud.",
+        "price": 5.94
+      },
+      {
+        "_id": "6228bddee40003520e53cd12",
+        "title": "in proident",
+        "description": "Anim mollit pariatur cillum id irure nisi do consequat.",
+        "price": 1.97
+      }
+    ]
+    },
+    {
+      "_id": "6228bdde140071d789a8b841",
+      "ticker": "20220309-H",
+      "title": "ut excepteur",
+      "description": "Amet sunt do est irure eu.",
+      "price": 9.18,
+      "requirements": [
+        "Ipsum cillum aute commodo dolor sunt.",
+        "Cupidatat cillum excepteur ex quis consequat et anim consequat pariatur."
+      ],
+      "startDate": "2023-01-21T21:41:51.564Z",
+      "endDate": "2023-12-04T07:44:01.330Z",
+      "is_cancelled": "false",
+      "is_published": "true",
+      "stages": [
+        {
+          "_id": "6228bddedd5534c87cf42bd1",
+          "title": "consectetur aliqua",
+          "description": "Labore ex dolor minim anim tempor ex.",
+          "price": 2.14
+        },
+        {
+          "_id": "6228bdde140071d789a8b841",
+          "title": "irure incididunt",
+          "description": "Cillum elit ut officia nisi.",
+          "price": 5.75
+        },
+        {
+          "_id": "6228bddeeab48a2ee59abfa4",
+          "title": "aliquip aliqua",
+          "description": "Cupidatat reprehenderit elit magna labore.",
+          "price": 6.25
+        }
+      ]
+    }
+  ]
+}

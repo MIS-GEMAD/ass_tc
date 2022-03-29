@@ -1,0 +1,17 @@
+{
+    "ticker": "220228-DBAE",
+    "title": "Viajesito doblemente rico",
+    "description": "Esto es una maravilla",
+    "price": 107.38,
+    "requirements": ["Ropa","Dinero"],
+    "start_date": "2023-01-03T22:47:50.569Z",
+    "end_date": "2023-11-02T19:16:03.854Z",
+    "is_cancelled": false,
+    "is_published": false,
+    "pictures":[],
+    "stages":[],
+    "sponsorships":[],
+    "applications":[],
+    "manager":"622c04299552b0ab808ecf9j"
+   	
+}

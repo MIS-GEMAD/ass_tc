@@ -1,0 +1,2700 @@
+{
+	"info": {
+		"_postman_id": "4bd1a14c-4827-4f66-a9a8-6cb2f3187e23",
+		"name": "ACME EXPLORER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ACTOR",
+			"item": [
+				{
+					"name": "list_all_actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actors",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor 1 (EXPLORER SPANISH)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer Spanish\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123456ABCDEFGH\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Antonio\",\r\n    \"surname\": \"García\",\r\n    \"email\": \"antoniogarcia1231@gmail.com\",\r\n    \"phone\": \"623154879\",\r\n    \"address\": \"Calle Resolana\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc8\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor (EXPLORER ENGLISH)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer English\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"ANthony\",\r\n    \"surname\": \"Martial\",\r\n    \"email\": \"antonioMartial12311@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor (SPONSOR)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Sponsor English\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"fsdnfsnadlfsadnl\",\r\n    \"role\": [\r\n        \"SPONSOR\"\r\n    ],\r\n    \"name\": \"Bartolome\",\r\n    \"surname\": \"Alarcon\",\r\n    \"email\": \"Bartolomealargocno111@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Sevilla\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebcd\"],\r\n    \"applications\": [\"6219fe03d6e229826747ebe3\",\"6219fe03d6e229826747ebe4\",\"6219fe03d6e229826747ebeb\"],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor (MANAGER)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Manager English\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"MANAGER\"\r\n    ],\r\n    \"name\": \"Lolo\",\r\n    \"surname\": \"Herrero\",\r\n    \"email\": \"Lolohererr11o@gmail.com\",\r\n    \"phone\": \"62315656\",\r\n    \"address\": \"Calle Barcelona\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor (ADMINISTRATOR)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Administrator Spanish\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"fkasfnasffsdadnfdasf\",\r\n    \"role\": [\r\n        \"ADMINISTRATOR\"\r\n    ],\r\n    \"name\": \"alvaro\",\r\n    \"surname\": \"trujillo\",\r\n    \"email\": \"alvarotrujillo11@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Alcosa\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_actor (EMAIL NOT VALID)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor which email is not valid\",()=>{\r",
+									"    pm.response.to.have.status(400);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Manue\",\r\n    \"surname\": \"Garciaa\",\r\n    \"email\": \"elmanugmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_an_actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer Spanish\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3MDEzNDMsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3NzAxMzQzLCJleHAiOjE2NDc3MDQ5NDMsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.gvrprXVLcUMRdVA8EtgxZw300mZf9EPrYb-jk8aaUWdXI40LPYvw8aGzmEqqOG9ku_QROGZyh8hRAIgBVXlyIXMhhNkU0PXDml8s_CkfjJTw3CxEjnocetiD_AH1o7FbZ_vf1gF4mYnEBWDizvm5unZ1nUg8g-o6e9_FgN-9Mc-Itv0jKxC3pVm31Y99W3KMKggcQkDlNKdMfgMwe9uw9vmjDPCpKDpBCHwEUauY13Mxleg6Y3sbJAdkLw8zTj01_vmRaqP-Nhww7qIZ-VLeHTl2XvbtkbkbhdNtfatZIh9Ox0Yrk_LJTMVI_Cu38v4tYa1DraBRwcZWR7zmyNTuzA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manuel\",\r\n    \"surname\": \"García\",\r\n    \"phone\": \"623154879\",\r\n    \"address\": \"Calle Resolana\",\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors/622f3e1e2d80876e23c942ec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors",
+								"622f3e1e2d80876e23c942ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_an_actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL ACTORS\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/actors/622f3e1e60a1b9cbe9cac3af",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors",
+								"622f3e1e60a1b9cbe9cac3af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ban_an_actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer Spanish\",()=>{",
+									"    pm.response.to.have.status(201);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTM1NzQsInVzZXJfaWQiOiJhZG1pbjFAYWRtaW4xLmNvbSIsInN1YiI6ImFkbWluMUBhZG1pbjEuY29tIiwiaWF0IjoxNjQ3ODEzNTc0LCJleHAiOjE2NDc4MTcxNzQsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.MzKNKbKSoqrVcVtuKce7w4yNhFlReA786KHONsRLrMlIAc3djMTxgcEnp0utILYI_X45fRhItn1mjXY-Hy9qJGOW30y3sy1LensbBygn8ic4PuZZ9G3_sT8V5DNRomT9rz3UellWKsEqaqPkzg68Wq2x4FQq8KuxvnqTnQzbdF7qSNO_QT97Amk3BExXU37l1BUTDE816PFjUHB1tiAF6Mj3fzqgkuy53kmmNmT55C_zgD4D4CHMJtIasz-SR5xywX8wFnLdhQ8bts9hAba9-teR7LkWxraJ2Mwh0Qua6n1l_y_AFjTZizTaa0LUAKAQXKLEQHUoC57BRc4qJZvasg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"123456ABCDEFGH\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors/622f3e1e56cd9a84ad1c0318/ban",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors",
+								"622f3e1e56cd9a84ad1c0318",
+								"ban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unban_an_actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer Spanish\",()=>{",
+									"    pm.response.to.have.status(201);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTM1NzQsInVzZXJfaWQiOiJhZG1pbjFAYWRtaW4xLmNvbSIsInN1YiI6ImFkbWluMUBhZG1pbjEuY29tIiwiaWF0IjoxNjQ3ODEzNTc0LCJleHAiOjE2NDc4MTcxNzQsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.MzKNKbKSoqrVcVtuKce7w4yNhFlReA786KHONsRLrMlIAc3djMTxgcEnp0utILYI_X45fRhItn1mjXY-Hy9qJGOW30y3sy1LensbBygn8ic4PuZZ9G3_sT8V5DNRomT9rz3UellWKsEqaqPkzg68Wq2x4FQq8KuxvnqTnQzbdF7qSNO_QT97Amk3BExXU37l1BUTDE816PFjUHB1tiAF6Mj3fzqgkuy53kmmNmT55C_zgD4D4CHMJtIasz-SR5xywX8wFnLdhQ8bts9hAba9-teR7LkWxraJ2Mwh0Qua6n1l_y_AFjTZizTaa0LUAKAQXKLEQHUoC57BRc4qJZvasg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"123456ABCDEFGH\",\n    \"ban\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/actors/622f3e1e56cd9a84ad1c0318/unban",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actors",
+								"622f3e1e56cd9a84ad1c0318",
+								"unban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_preferred_languaje_from_auth_actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_actor Explorer Spanish\",()=>{",
+									"    pm.response.to.have.status(201);",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"preferred_language\": \"English\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/profile/languaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profile",
+								"languaje"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TRIPS",
+			"item": [
+				{
+					"name": "list_all_trips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_a_trip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_a_trip 1\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3OTUyMDAsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3OTUyMDAsImV4cCI6MTY0Nzc5ODgwMCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.ISc1CKgX81dPOnWGfnNBMHEVTAEBNC90YnlzYW8iBstzN4xtqSKjExTw_b0LthoR6tJqwub3VJ98hncomUn1zcNCjVY3EZmYTds3xsyRluR14DsoW5M9XUnO7iaYu8KH17l_m9wYTRn4qvHG0dyDyDM8qmkHLlWH8swUdC3H_I0I2wVY6GD2_5yiu4fgTdHLurE1OZu8qzbEUUSFKJoiQwqKFf_6ZxAcAbTBoN7MWk8Vr0LPo1mOBmgPkePIIPqspLqsquQddU-rv5dJrHm8BHMitQESfBB3HavF1jv8Smm0ARxrUh8tikAXUhXT4pMVx-7JPc5CTeTZBAVmMgsNxw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticker\": \"220228-DBAE\",\r\n    \"title\": \"Viajesito rico\",\r\n    \"description\": \"Esto es una maravilla\",\r\n    \"price\": 107.38,\r\n    \"requirements\": [\"Alcohol\",\"Dinero\"],\r\n    \"start_date\": \"2023-01-03T22:47:50.569Z\",\r\n    \"end_date\": \"2023-11-02T19:16:03.854Z\",\r\n    \"is_cancelled\": false,\r\n    \"is_published\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_trips_from_auth_manager",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3MjE5MzQsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3MjE5MzQsImV4cCI6MTY0NzcyNTUzNCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.KWLokTpQpPPzSGdDaINocHDAZPlC0O-rvn2U2WLGsAUC6h1b4tXZ4kb66F5CyuIHghTzfE8lKp7nwqw_pL5FJYNvcncBq0mOdJILD686w0lMRPWt6Dy71HtzsDmCG6LWHLCJIuHcLjdtS3pIErGoI9QuZbAuFNCkCfOVbIOtPwFBAMuZD32FjHrmGT3K4U0ep-Y3fiQ_vyr1EssSa8Xk_20RsSDfy3BfTxcjVbGJg9--9g6XTCkAqgdPgfC-7nn70r9trw5J6rmEJ0fOJIdlNzPYqtOu5W7OqNdavCwpLsS5kETJEvN3sR1c8FmGgRwEj8pySOTj8OrWSfkH7dl_SA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/owns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"owns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_a_trip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET TRIP 1\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/62364199ea29f0b79095efe1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"62364199ea29f0b79095efe1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_a_trip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"PUT A TRIP 1\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3OTUyMDAsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3OTUyMDAsImV4cCI6MTY0Nzc5ODgwMCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.ISc1CKgX81dPOnWGfnNBMHEVTAEBNC90YnlzYW8iBstzN4xtqSKjExTw_b0LthoR6tJqwub3VJ98hncomUn1zcNCjVY3EZmYTds3xsyRluR14DsoW5M9XUnO7iaYu8KH17l_m9wYTRn4qvHG0dyDyDM8qmkHLlWH8swUdC3H_I0I2wVY6GD2_5yiu4fgTdHLurE1OZu8qzbEUUSFKJoiQwqKFf_6ZxAcAbTBoN7MWk8Vr0LPo1mOBmgPkePIIPqspLqsquQddU-rv5dJrHm8BHMitQESfBB3HavF1jv8Smm0ARxrUh8tikAXUhXT4pMVx-7JPc5CTeTZBAVmMgsNxw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"viaje a CONIL de la frontera \",\r\n    \"description\": \"Esto es una descripcion hecha por manu.\",\r\n    \"requirements\": [\"Alcohol\",\"Dinero\"],\r\n    \"start_date\": \"2023-01-03T22:47:50.569Z\",\r\n    \"end_date\": \"2023-11-02T19:16:03.854Z\",\r\n    \"is_cancelled\": false,\r\n    \"is_published\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/62376464cd2ade0b56317607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"62376464cd2ade0b56317607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_a_trip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"DELETE A TRIP 2\",()=>{\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3MTI2NjEsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3MTI2NjEsImV4cCI6MTY0NzcxNjI2MSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.IqGKoyFMuZDzaOfPIlTu_vvDDcoKEhLtUE5ruIsqU8Cj-ZcjzydEc37C2db3LC_c-gDGjNauS1rMANIebTAES-iIHy_xO004YmbfINVlwD4bgGg3sfR1cxU-F9YCFv7sNgdxddfHrZ_O7RWDoNHfNwFawZ8Gyklyudcbl5oO2aYQWWyepMOEvgcGKZspVPNRx_NHFDVbaPa6q7P7mldoPAvp_y1Osy7zWgfPeLbWbvbY3BUbVGP2x0S6A4mRLRfY9vMJlgPfGl5_DoujZu4OLYBWKFnmagTmdF4HVgOWhmpifNz8qL1yCc34bSc5lSzvW0ig-GfwxSuj9jiu4fkFNQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/62361cef898e598520a673ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"62361cef898e598520a673ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search_trips",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keyword\": \"id\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel_a_trip",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/622e57a69879d3fe41b48d5a/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"622e57a69879d3fe41b48d5a",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "select_random_banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/trips/622f3e1ed47389e877e18366/random-banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"622f3e1ed47389e877e18366",
+								"random-banner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APPLICATIONS",
+			"item": [
+				{
+					"name": "list_all_applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL APPLICATIONS\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_an_application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_application status PENDING\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trip\": \"622f3e1e14f4886e12c3bbb4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (all)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (PENDING)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns?status=pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (DUE)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns?status=due",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "due"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (REJECTED) Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns?status=rejected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "rejected"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (ACCEPTED)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns?status=accepted",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "accepted"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_applications_from_auth_explorer (CANCELLED)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL TRIPS OF AN ACTOR\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTQ1NjAsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODE0NTYwLCJleHAiOjE2NDc4MTgxNjAsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.OyrmTclg3hPhkR3VyXRoBKTc1X8clAVy1FNUwtLdFUmcZpdAvqUGns94gy92MILi0cl_JrezVRgGDd6RBg8oNl_ywmBp4brJTF0Xrz0Wl48t2Gkny6zQHt6R-rQYnZ4DSnPWrn6ZqXcBdAwSldP8mCQFiM0dudVgVIwCS3obaKZwXtEBycKyUDpsMIZytqXRjsQQnAxiX3btQQaUrK4EwJlNUBRSqJn4QCptvXvFROp2eJzkjOZ1LePajwGWsRbtQhaCEQoppFRWIm_zDDM9cgWFpvcx5BoycgG1qiB2s1CZNeathQim80_pDwLr-frCqcbFs2eqaC3N4bIRsov47w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/owns?status=cancelled",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"owns"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "cancelled"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_an_application",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"TEST GET ALL ACTORS\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/622e57469879d3fe41b48cf5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"622e57469879d3fe41b48cf5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_trip_applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"list_trip_applications\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/621cbe9ecf1e47108c29a316",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"621cbe9ecf1e47108c29a316"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_actor_applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"list_actor_applications\",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/621cbab5cf1e47108c29a308",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"621cbab5cf1e47108c29a308"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel_an_application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3OTUyOTEsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3Nzk1MjkxLCJleHAiOjE2NDc3OTg4OTEsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.V_5bgOo6xy9kIQJlaMaY1EL3Fs2oNVAV2POj6qikjSzkMQ_AIts-DHmbWo_HILRZPZzmL1E9z52hHBIOAqXr7J5frvAZ-fkRTJSkP_iuM-GdX8Q8DaYOxAB-gsjO0NDafXiD_PbsHnupFOvGwey03JABgdyLYITKVDEs6KaP0D8e01MCFuGbQHtrguTHs6diiqvg5ZZpZo_LHprp6eVrrLUD2eE3YbYP1-9Fst1A-XxF-EOdBTErzCT9uf6Jz3A597srK8aj_lvttuYUYrXIioawucuhG9P8aocBvmPB8OdqFAxDK06aQ_i8Zb5x_j5zaLFmUg3ZPyrylbuyvKTENQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/62376472cd2ade0b56317625/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"62376472cd2ade0b56317625",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject_an_application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/622e9112e5a06a60562474d7/reject",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"622e9112e5a06a60562474d7",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "due_an_application",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3OTUyMDAsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3OTUyMDAsImV4cCI6MTY0Nzc5ODgwMCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.ISc1CKgX81dPOnWGfnNBMHEVTAEBNC90YnlzYW8iBstzN4xtqSKjExTw_b0LthoR6tJqwub3VJ98hncomUn1zcNCjVY3EZmYTds3xsyRluR14DsoW5M9XUnO7iaYu8KH17l_m9wYTRn4qvHG0dyDyDM8qmkHLlWH8swUdC3H_I0I2wVY6GD2_5yiu4fgTdHLurE1OZu8qzbEUUSFKJoiQwqKFf_6ZxAcAbTBoN7MWk8Vr0LPo1mOBmgPkePIIPqspLqsquQddU-rv5dJrHm8BHMitQESfBB3HavF1jv8Smm0ARxrUh8tikAXUhXT4pMVx-7JPc5CTeTZBAVmMgsNxw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/62375c766c39cadb793d826b/due",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"62375c766c39cadb793d826b",
+								"due"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pay_a_trip",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3OTUyOTEsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3Nzk1MjkxLCJleHAiOjE2NDc3OTg4OTEsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.V_5bgOo6xy9kIQJlaMaY1EL3Fs2oNVAV2POj6qikjSzkMQ_AIts-DHmbWo_HILRZPZzmL1E9z52hHBIOAqXr7J5frvAZ-fkRTJSkP_iuM-GdX8Q8DaYOxAB-gsjO0NDafXiD_PbsHnupFOvGwey03JABgdyLYITKVDEs6KaP0D8e01MCFuGbQHtrguTHs6diiqvg5ZZpZo_LHprp6eVrrLUD2eE3YbYP1-9Fst1A-XxF-EOdBTErzCT9uf6Jz3A597srK8aj_lvttuYUYrXIioawucuhG9P8aocBvmPB8OdqFAxDK06aQ_i8Zb5x_j5zaLFmUg3ZPyrylbuyvKTENQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/applications/62375c766c39cadb793d826b/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"applications",
+								"62375c766c39cadb793d826b",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STAGES",
+			"item": [
+				{
+					"name": "list_all_stages_from_trip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"list_all_stages \",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/62363c1f55f2d40be5be4a6b/stages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"62363c1f55f2d40be5be4a6b",
+								"stages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_a_stage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_stage 1\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc3MjE5MzQsInVzZXJfaWQiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJzdWIiOiJtYW5hZ2VyMUBtYW5hZ2VyMS5jb20iLCJpYXQiOjE2NDc3MjE5MzQsImV4cCI6MTY0NzcyNTUzNCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.KWLokTpQpPPzSGdDaINocHDAZPlC0O-rvn2U2WLGsAUC6h1b4tXZ4kb66F5CyuIHghTzfE8lKp7nwqw_pL5FJYNvcncBq0mOdJILD686w0lMRPWt6Dy71HtzsDmCG6LWHLCJIuHcLjdtS3pIErGoI9QuZbAuFNCkCfOVbIOtPwFBAMuZD32FjHrmGT3K4U0ep-Y3fiQ_vyr1EssSa8Xk_20RsSDfy3BfTxcjVbGJg9--9g6XTCkAqgdPgfC-7nn70r9trw5J6rmEJ0fOJIdlNzPYqtOu5W7OqNdavCwpLsS5kETJEvN3sR1c8FmGgRwEj8pySOTj8OrWSfkH7dl_SA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"CHIPIONA 2014\",\r\n    \"description\": \"CHICLANA Con los chavales 2014\",\r\n    \"price\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/62364199ea29f0b79095efe1/stages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"62364199ea29f0b79095efe1",
+								"stages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_a_stage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"read_a_stage 1 \",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/trips/621cd18c7984f97f14e9b0f9/stages/621ce2127984f97f14e9b159",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"621cd18c7984f97f14e9b0f9",
+								"stages",
+								"621ce2127984f97f14e9b159"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_a_stage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update_a_stage 2\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"CONIL 2014\",\r\n    \"description\": \"CONIL Con los chavales 2014\",\r\n    \"price\": 38.55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/621cd18c7984f97f14e9b0f9/stages/621ce2727984f97f14e9b15c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"621cd18c7984f97f14e9b0f9",
+								"stages",
+								"621ce2727984f97f14e9b15c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_a_stage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"delete_a_stage 1\",()=>{\r",
+									"    pm.response.to.have.status(204);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/trips/621cd18c7984f97f14e9b0f9/stages/621ce2127984f97f14e9b159",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"trips",
+								"621cd18c7984f97f14e9b0f9",
+								"stages",
+								"621ce2127984f97f14e9b159"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SPONSORSHIP",
+			"item": [
+				{
+					"name": "list_all_sponsorships",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"list_all_sponsorships \",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MDY4NTcsInVzZXJfaWQiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJzdWIiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJpYXQiOjE2NDc4MDY4NTcsImV4cCI6MTY0NzgxMDQ1NywiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.SPBCLdrV0k45me068SPzaTXlb6IP8kSArAL1Ygy39yTEdu5ZmnxP8SKq_IFwjXvIXcbTqEB7JxYqW-IQYoTApvzw0bCaW7NoR3081A93IHwjO8ZL6cLvV8bfLHMoFufMf6aKkFl528U3-TIKZ8hLBebwSA-GH2i7G3Bf-p3QEGPyKNxY3aFrsWjsWqV_EoKAeIxZiC-nAzy75PP5CoZsVmmBt2w1zgPpt34vKJXA3_kdMpby3brteubBxFOcGq3mv1dtsFKVvw7SEYTpY9Y_FP1mkf-KMVi30KJu-DaMFpRaigI0ljguaUAhaofTjUEppTNbQxCwLR81kDqGNvKUug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/sponsorships",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_a_sponsorship",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"create_an_sponsorship 1\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTE5NzgsInVzZXJfaWQiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJzdWIiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJpYXQiOjE2NDc4MTE5NzgsImV4cCI6MTY0NzgxNTU3OCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.atchxsups_olc6RlcJSzc-kWTBuuBj4xXOpDav-cU14V673eYsCVmgwWBu8JZgPayKc9vK39z9V-IYfKmySfHdqTO7i4vpB_-RmjtWHCHgwfft2-wVpqnxSzdR3euymljTg-c7sXJ3yuL0uoqfKGHzyOUd-h-wSj4QmngfkVyVDKpdFr20uPBo5xjrEj1k7qd4LiilATDj5r7P35FVsOwjsiMsT4ojwCQpbBUwK3xCpKADlGa4g3T-qr6nW9ZhHGZPAehGwKG3G2whzI5_aX4QkVXA-bWn4HEOk-f5oIDjUtiPVZyY1Y2U-wUt52PxK_A4h7YX-xdAWM56I8P3HHNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"banner\": \"http://google.es\",\r\n    \"link\": \"http://aliqua.com/81e03759-bb85-409e-bdf9-1ed3f5f63b17\",\r\n    \"trip\": [\"621cd18c7984f97f14e9b101\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sponsorships",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_a_sponsorship",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"read_a_spònsorship \",()=>{\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTE5MDYsInVzZXJfaWQiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJzdWIiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJpYXQiOjE2NDc4MTE5MDYsImV4cCI6MTY0NzgxNTUwNiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.UEpnMDCXwxhcwDxvdlfM5s2AlBnkYNllttuYBnVWDVnvMV9w-Bssx74m8WfqgfmfTShGBZcnjQhSH1endGqMiF3g0iDeRF8tKpTv0p7YvJkae0hcprUbtEU4lMT9Xd6PqeU86aNAqipveSed5T2JgPr2iawe_jKu77N1wFgllEupYS850ukIquVwvwQ0ID4IaxGi3q6omvWjweYU2X8gWw12tR2lDA3Uw0IGc7A15U7dT6h9jpMa8N2HuvmEUvzgh3i5EsEsSEZHPNu2HNxAkfb41z_wt1n_Y-q6UPeKr0aXjqd_y0nZ8a3SO2qZ8cBQqqOofRoahn34VHUOOv2YRA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/sponsorships/6237a21fa4b928f121493af0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships",
+								"6237a21fa4b928f121493af0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_a_sponsorship",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"update_an_sponsorship 1\",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTE5NzgsInVzZXJfaWQiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJzdWIiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJpYXQiOjE2NDc4MTE5NzgsImV4cCI6MTY0NzgxNTU3OCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.atchxsups_olc6RlcJSzc-kWTBuuBj4xXOpDav-cU14V673eYsCVmgwWBu8JZgPayKc9vK39z9V-IYfKmySfHdqTO7i4vpB_-RmjtWHCHgwfft2-wVpqnxSzdR3euymljTg-c7sXJ3yuL0uoqfKGHzyOUd-h-wSj4QmngfkVyVDKpdFr20uPBo5xjrEj1k7qd4LiilATDj5r7P35FVsOwjsiMsT4ojwCQpbBUwK3xCpKADlGa4g3T-qr6nW9ZhHGZPAehGwKG3G2whzI5_aX4QkVXA-bWn4HEOk-f5oIDjUtiPVZyY1Y2U-wUt52PxK_A4h7YX-xdAWM56I8P3HHNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"banner\": \"http://sonydddd.com\",\r\n    \"link\": \"http://aliqua.com/81e03759-bb85-409e-bdf9-1ed3f5f63b17\",\r\n    \"trip\": [\"621cd18c7984f97f14e9b101\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sponsorships/6237a2a31f95ed3764eff6fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships",
+								"6237a2a31f95ed3764eff6fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_a_sponsorship",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"delete_an_sponsorship 2\",()=>{\r",
+									"    pm.response.to.have.status(204);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTE5NzgsInVzZXJfaWQiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJzdWIiOiJzcG9uc29yMkBzcG9uc29yMi5jb20iLCJpYXQiOjE2NDc4MTE5NzgsImV4cCI6MTY0NzgxNTU3OCwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.atchxsups_olc6RlcJSzc-kWTBuuBj4xXOpDav-cU14V673eYsCVmgwWBu8JZgPayKc9vK39z9V-IYfKmySfHdqTO7i4vpB_-RmjtWHCHgwfft2-wVpqnxSzdR3euymljTg-c7sXJ3yuL0uoqfKGHzyOUd-h-wSj4QmngfkVyVDKpdFr20uPBo5xjrEj1k7qd4LiilATDj5r7P35FVsOwjsiMsT4ojwCQpbBUwK3xCpKADlGa4g3T-qr6nW9ZhHGZPAehGwKG3G2whzI5_aX4QkVXA-bWn4HEOk-f5oIDjUtiPVZyY1Y2U-wUt52PxK_A4h7YX-xdAWM56I8P3HHNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sponsorships/62379f9b03aad8228a331344",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships",
+								"62379f9b03aad8228a331344"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pay_a_sponsorship",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTE5MDYsInVzZXJfaWQiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJzdWIiOiJzcG9uc29yMUBzcG9uc29yMS5jb20iLCJpYXQiOjE2NDc4MTE5MDYsImV4cCI6MTY0NzgxNTUwNiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6e30sInNpZ25faW5fcHJvdmlkZXIiOiJjdXN0b20ifX0.UEpnMDCXwxhcwDxvdlfM5s2AlBnkYNllttuYBnVWDVnvMV9w-Bssx74m8WfqgfmfTShGBZcnjQhSH1endGqMiF3g0iDeRF8tKpTv0p7YvJkae0hcprUbtEU4lMT9Xd6PqeU86aNAqipveSed5T2JgPr2iawe_jKu77N1wFgllEupYS850ukIquVwvwQ0ID4IaxGi3q6omvWjweYU2X8gWw12tR2lDA3Uw0IGc7A15U7dT6h9jpMa8N2HuvmEUvzgh3i5EsEsSEZHPNu2HNxAkfb41z_wt1n_Y-q6UPeKr0aXjqd_y0nZ8a3SO2qZ8cBQqqOofRoahn34VHUOOv2YRA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/sponsorships/6237a21fa4b928f121493af0/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sponsorships",
+								"6237a21fa4b928f121493af0",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FINDER",
+			"item": [
+				{
+					"name": "create_a_finder_criteria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"list_all_sponsorships \",()=>{\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MDE2MjQsInVzZXJfaWQiOiJleHBsb3JlcjFAZXhwbG9yZXIxLmNvbSIsInN1YiI6ImV4cGxvcmVyMUBleHBsb3JlcjEuY29tIiwiaWF0IjoxNjQ3ODAxNjI0LCJleHAiOjE2NDc4MDUyMjQsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.EpHGFrAuSXXHsQiGtojlXN53Q-Dyug13sCJl9jjEGUgrfDETKe0icp3iKDhUunTTaeytpfEHDJ9hhGt1J1d5jUdpNeBntTe-jBOm_fxW9wnMM1ASoFK1FIh4-K86xwVXcKaQF18609h1oo6YTh3QN5N_XCoqhxKEMBVlRRTZ3Vw0nNwXWKs5qS44iLZpJcL3OLlhap_Lx0JqSDTNsW0rbAgEsXM1OOS362u9lY6O2qypJNlv7Fv7CptnJLWReuGZxAr57YKw_Yffm6BB352-LSiGD5mm5atLZsSgwyOE7AfnO_53vSbOyCq5TH-JKI5tw2YAOyzvBURnCqYFu_zWxw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"keyword\":\"acvbfsdfd\",\r\n    \"price_from\": 10,\r\n    \"price_to\": 100,\r\n    \"date_from\":\"2023-01-03T22:47:50.569Z\",\r\n    \"date_to\": \"2023-11-02T19:16:03.854Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/finder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CONFIGURATION",
+			"item": [
+				{
+					"name": "updates_finder_result",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"max_finder_result\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/finder/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"finder",
+								"result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updates_rate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flat_rate\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updates_period",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flush_period\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/period",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"period"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CUBE",
+			"item": [
+				{
+					"name": "show_cube",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cube/show",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cube",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "compute_cube",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"actor\": \"622f3e1e2d80876e23c942ec\",\n    \"date_from\": \"2021-05-02T19:16:03.854Z\",\n    \"date_to\": \"2021-07-02T19:16:03.854Z\",\n    \"arbitrary_money\": 9.0,\n    \"comparision\": \">=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cube/compute",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cube",
+								"compute"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MASIVECHARGE",
+			"item": [
+				{
+					"name": "applications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=applications&sourceFile=./init_data/applications.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "applications"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/applications.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=stages&sourceFile=./init_data/stages.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "stages"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/stages.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sponsorships",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=sponsorships&sourceFile=./init_data/sponsorships.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "sponsorships"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/sponsorships.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pictures",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=pictures&sourceFile=./init_data/pictures.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "pictures"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/pictures.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "finders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=finders&sourceFile=./init_data/finders.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "finders"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/finders.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=trips&sourceFile=./init_data/trips.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "trips"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/trips.json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/storage/fs?dbURL=mongodb://mongodb:27017/ACME_Explorer&collection=actors&sourceFile=./init_data/actors.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"storage",
+								"fs"
+							],
+							"query": [
+								{
+									"key": "dbURL",
+									"value": "mongodb://mongodb:27017/ACME_Explorer"
+								},
+								{
+									"key": "collection",
+									"value": "actors"
+								},
+								{
+									"key": "sourceFile",
+									"value": "./init_data/actors.json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DASHBOARD",
+			"item": [
+				{
+					"name": "get stats",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTExMzEsInVzZXJfaWQiOiJhZG1pbjFAYWRtaW4xLmNvbSIsInN1YiI6ImFkbWluMUBhZG1pbjEuY29tIiwiaWF0IjoxNjQ3ODExMTMxLCJleHAiOjE2NDc4MTQ3MzEsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.AjU-UVXbgOUYt9a0kNKPFguMiF_E0B131TLET1i1m3NQrhegrR23irrRoLNztS69lAEX1UU27ga1oeJe3o6m5gw24_S4UJ4wUSBtTU_ci2xF7As4hlx4d6L1-4LZqxPQNSgqOWv7V2ehznU9r-T6_KLZTgQ1fEQ7nD7jXdXSGdDGmqXGpj7gfok7bcTmG_NXKN3ANhZOIsr51hqQko6uioi39vaKOLS5oE9ZT-iHC3QavFjiNoG6jHceIdUKM0DvTAsTQPKJGvP-adFJJatUfmCoFaBidnLk0nvlLtrX6p74T65hQOnRhaO08jASSG9_-V-XSE-9Rjcg2JJZde7b-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard/stats",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list all computations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTExMzEsInVzZXJfaWQiOiJhZG1pbjFAYWRtaW4xLmNvbSIsInN1YiI6ImFkbWluMUBhZG1pbjEuY29tIiwiaWF0IjoxNjQ3ODExMTMxLCJleHAiOjE2NDc4MTQ3MzEsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.AjU-UVXbgOUYt9a0kNKPFguMiF_E0B131TLET1i1m3NQrhegrR23irrRoLNztS69lAEX1UU27ga1oeJe3o6m5gw24_S4UJ4wUSBtTU_ci2xF7As4hlx4d6L1-4LZqxPQNSgqOWv7V2ehznU9r-T6_KLZTgQ1fEQ7nD7jXdXSGdDGmqXGpj7gfok7bcTmG_NXKN3ANhZOIsr51hqQko6uioi39vaKOLS5oE9ZT-iHC3QavFjiNoG6jHceIdUKM0DvTAsTQPKJGvP-adFJJatUfmCoFaBidnLk0nvlLtrX6p74T65hQOnRhaO08jASSG9_-V-XSE-9Rjcg2JJZde7b-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get last computation",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImYxZDU2YTI1MWU0ZGRhM2Y0NWM0MWZkNWQ0ZGEwMWQyYjlkNzJlMGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aCIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgiLCJhdXRoX3RpbWUiOjE2NDc4MTExMzEsInVzZXJfaWQiOiJhZG1pbjFAYWRtaW4xLmNvbSIsInN1YiI6ImFkbWluMUBhZG1pbjEuY29tIiwiaWF0IjoxNjQ3ODExMTMxLCJleHAiOjE2NDc4MTQ3MzEsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.AjU-UVXbgOUYt9a0kNKPFguMiF_E0B131TLET1i1m3NQrhegrR23irrRoLNztS69lAEX1UU27ga1oeJe3o6m5gw24_S4UJ4wUSBtTU_ci2xF7As4hlx4d6L1-4LZqxPQNSgqOWv7V2ehznU9r-T6_KLZTgQ1fEQ7nD7jXdXSGdDGmqXGpj7gfok7bcTmG_NXKN3ANhZOIsr51hqQko6uioi39vaKOLS5oE9ZT-iHC3QavFjiNoG6jHceIdUKM0DvTAsTQPKJGvP-adFJJatUfmCoFaBidnLk0nvlLtrX6p74T65hQOnRhaO08jASSG9_-V-XSE-9Rjcg2JJZde7b-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard/latest",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rebuild period (every 10 seconds)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard?rebuildPeriod=*/20 * * * * *",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "rebuildPeriod",
+									"value": "*/20 * * * * *"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rebuild period (every 20 seconds)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard?rebuildPeriod=*/20 * * * * *",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "rebuildPeriod",
+									"value": "*/20 * * * * *"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rebuild period (every hour)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "idToken",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/dashboard?rebuildPeriod=*/20 * * * * *",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "rebuildPeriod",
+									"value": "*/20 * * * * *"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

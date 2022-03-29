@@ -1,0 +1,10 @@
+{
+  "simulation": "ass.TwoScenarios",
+  "simulationId": "twoscenarios",
+  "start": 1647808937537,
+  "description": "",
+  "scenarios": ["Explorers", "Manager"],
+  "assertions": [
+
+  ]
+}

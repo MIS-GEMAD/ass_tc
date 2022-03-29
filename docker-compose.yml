@@ -1,0 +1,39 @@
+services:
+
+  node:
+    container_name: node
+    build: .
+    depends_on:
+      - mongodb
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/opt/app
+      - /opt/app/node_modules
+    networks:
+      - ass
+
+  test:
+    container_name: test
+    build: 
+      context: .
+      dockerfile: test.Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - ass
+  
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: ACME_Explorer
+    ports:
+      - "27017:27017"
+    networks:
+      - ass
+
+networks:
+  ass:
+    driver: bridge

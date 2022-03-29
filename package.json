@@ -1,0 +1,44 @@
+{
+  "name": "l01-s01",
+  "version": "1.0.0",
+  "description": "ACMEExplorer REST API",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --verbose --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MIS-GEMAD/ass.git"
+  },
+  "author": "davromorg@alum.us.es",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MIS-GEMAD/ass/issues"
+  },
+  "homepage": "https://github.com/MIS-GEMAD/ass#readme",
+  "dependencies": {
+    "async": "^3.2.3",
+    "axios": "^0.26.0",
+    "babel-eslint": "^10.1.0",
+    "bcrypt": "^5.0.1",
+    "cron": "^1.8.2",
+    "dateformat": "^5.0.3",
+    "express": "^4.16.4",
+    "firebase-admin": "^10.0.2",
+    "mongoose": "^6.1.9",
+    "mongoose-type-url": "^2.1.0",
+    "nanoid": "^3.3.1",
+    "newman": "^5.3.1",
+    "newman-reporter-htmlextra": "^1.22.7",
+    "stream-to-mongo-db": "^1.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}

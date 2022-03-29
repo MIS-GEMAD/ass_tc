@@ -1,0 +1,20 @@
+{
+  "price": 6.58,
+  "title": "id mollit",
+  "end_date": "2023-12-15T21:52:56.440Z",
+  "start_date": "2022-08-21T18:39:54.586Z",
+  "description": "Velit qui nulla in elit dolor cupidatat id ut dolore mollit quis eu consequat.",
+  "is_cancelled": "true",
+  "is_published": "true",
+  "requirements": [
+    "Qui sunt ad ullamco nisi.",
+    "Culpa qui id consectetur tempor enim velit deserunt voluptate aliqua incididunt."
+  ],
+  "ticker": "79608049-RJQV",
+  "_id": "622f3e1eff59855cba428140",
+  "stages": [],
+  "applications": [],
+  "sponsorships": [],
+  "pictures": [],
+  "manager": "622f3e1e2946a83ccf7550b3"
+}

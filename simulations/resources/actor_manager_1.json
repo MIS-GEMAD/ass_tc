@@ -1,0 +1,18 @@
+{
+"ban": "false",
+  "name": "Mindy",
+  "role": "MANAGER",
+  "email": "manager1@manager1.com",
+  "phone": "9886340789",
+  "address": "1 Herkimer Place, Cashtown, Mississippi",
+  "created": "2021-04-01T14:41:31.618Z",
+  "surname": "Robinson",
+  "password": "manager1",
+  "validated": "true",
+  "preferred_language": "Spanish",
+  "_id": "622f3e1e2946a83ccf7550b3",
+  "applications": [ ],
+  "trips": [ ],
+  "finders": [],
+  "customToken" : "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTY0NzY5MDU0NSwiZXhwIjoxNjQ3Njk0MTQ1LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay00cjUyNEBhY21lZXhwbG9yZXJhdXRoLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoiZmlyZWJhc2UtYWRtaW5zZGstNHI1MjRAYWNtZWV4cGxvcmVyYXV0aC5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6Im1hbmFnZXIxQG1hbmFnZXIxLmNvbSJ9.DGJBOju-w_yh3fs1z9gY8XyHA1vZlwN9sK4f0-KYAUd07otI3-Of0h_9-h-LzzLF5d-s6SS0tYQ1I7druHrgzjwayj6MSb0Tm8eRd0Z4wqqU5RYocPTMvjMzJRJesKM3tqHqBFO4tQsDYgBquSU2ovfExUZnOyjGgbhuJ8KJZIFCh09H-9SG4mX_8Eg1gh_tL-cJT9zNxWTykZaUIvYxEy8gIZyliw9FyDd73mCHhlmrhmH3iRdZ6Hzhz35QIeMa_UNnzBfzHHr6r_b4b8T3jF3YC7rA1jxWHEuwD0M78aIROPjFryGH49uO7sJrUFPKfJ38aHJ4inuBucIpu58WEw"
+}
