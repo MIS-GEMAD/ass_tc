@@ -20,7 +20,7 @@ const DashboardTools = require('./api/controllers/dashboardController')
 
 // firebase
 const admin = require('firebase-admin')
-const serviceAccount = require('./acmeexplorerauth-firebase-adminsdk-4r524-aec195acfd')
+const serviceAccount = require('./acmeexplorerauthtc-firebase-adminsdk-f8akl-2e36cf02b4.json')
 
 // body parser
 const bodyParser = require("body-parser");
@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
 // para poder usar la API de firebase
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://acmeexplorertauth.firebaseio.com'
+  databaseURL: 'https://acmeexplorertauthtc.firebaseio.com'
 })
 
 // Routes
