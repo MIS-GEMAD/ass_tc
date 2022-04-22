@@ -265,10 +265,11 @@ exports.list_applications_from_auth_explorer = async function (req, res) {
       }
     });
   } else {
-    Application.find({ actor: explorerId }, { status: status }, function (err, applications) {
+    Application.find({ actor: explorerId, status: status }, function (err, applications) {
       if (err) {
         res.status(400).send(err);
       } else {
+        console.log(applications)
         res.status(200).json(applications);
       }
     });
@@ -316,93 +317,4 @@ exports.pay_a_trip = async function (req, res) {
     
   });
 
-  /*
-Application.findById(req.params.applicationId, function (err, application) {
-    let tripId = application.trip
-
-    Trip.findById(tripId, function (err, trip) {
-
-      if (err) {
-        res.status(404).send(err);
-      } else {
-        if (!trip) {
-          res.status(404).send("Trip not found");
-        } else {
-          Actor.findById(req.params.actorId, function (err, actor) {
-            if (err) {
-              res.status(400).send(err);
-            } else {
-              if (!actor) {
-                res.status(404).send("Actor not found");
-              } else if (!actor.role.find((role) => role === "EXPLORER")) {
-                res.status(400).send("Actor must be explorer");
-              } else {
-                if (
-                  trip.applications.length > 0 &&
-                  actor.applications.length > 0
-                ) {
-                  var applicationId = "";
-                  var exist = false;
-                  if (!trip) {
-                    res.status(400).send("Trip must be applied");
-                  } else {
-                    for (let i = 0; i < trip.applications.length; i++) {
-                      for (let j = 0; j < actor.applications.length; j++) {
-                        if (trip.applications[i].toString() == actor.applications[j].toString()) {
-                          exist = true;
-                          applicationId = trip.applications[i].toString();
-                          break;
-                        }
-                      }
-                    }
-  
-                    if (!exist) {
-                      res.status(400).send("Application not found");
-                    } else {
-                      Application.findById(
-                        applicationId,
-                        function (err, application) {
-                          if (err) {
-                            res.status(400).send(err);
-                          } else {
-                            if (!application) {
-                              res.status(400).send("Application not found");
-                            } else {
-                              if (application.status !== "DUE") {
-                                res.status(400).send("Trip is not due");
-                              } else {
-                                Application.findOneAndUpdate(
-                                  { _id: applicationId },
-                                  { status: "ACCEPTED" },
-                                  { new: true },
-                                  function (err, application) {
-                                    if (err) {
-                                      res.status(400).send(err);
-                                    } else {
-                                      res.status(201).json(application);
-                                    }
-                                  }
-                                );
-                              }
-                            }
-                          }
-                        }
-                      );
-                    }
-                  }
-                } else {
-                  res.status(400).send("Application not found");
-                }
-              }
-            }
-          });
-        }
-      }
-    });
-
-  })
-  */
-
-
-  
 }
