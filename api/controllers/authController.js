@@ -11,9 +11,9 @@ exports.getUserId = async function (idToken) {
   }
 
   const actorFromFB = await admin.auth().verifyIdToken(idToken)
-  const uid = actorFromFB.uid
+  const email = actorFromFB.email
 
-  const mongoActor = await Actor.findOne({ email: uid })
+  const mongoActor = await Actor.findOne({ email: email })
   if (!mongoActor) {
     return null
   } else {
@@ -32,11 +32,11 @@ exports.verifyUser = function (requiredRoles) {
     }
 
     admin.auth().verifyIdToken(idToken).then(function (decodedToken) {
-      const uid = decodedToken.uid
+      const email = decodedToken.email
       const authTime = decodedToken.auth_time
       const exp = decodedToken.exp
 
-      Actor.findOne({ email: uid }, function (err, actor) {
+      Actor.findOne({ email: email }, function (err, actor) {
         if (err) {
           res.send(err)
         } else if (!actor) { // No actor found with that email as username
@@ -48,7 +48,7 @@ exports.verifyUser = function (requiredRoles) {
           for (let i = 0; i < requiredRoles.length; i++) {
             for (let j = 0; j < actor.role.length; j++) {
               if (requiredRoles[i] === actor.role[j]) {
-                if (actor.ban === false) {
+                if (actor.ban === false || actor.ban === undefined) {
                   isAuth = true
                   break
                 }

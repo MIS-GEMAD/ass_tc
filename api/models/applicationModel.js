@@ -29,7 +29,7 @@ const ApplicationSchema = new Schema(
       ref: 'Trip'
     }
   },
-  { strict: true }
+  { strict: false }
 );
 
 module.exports = mongoose.model("Application", ApplicationSchema);

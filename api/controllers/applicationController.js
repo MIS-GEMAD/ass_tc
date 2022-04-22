@@ -48,10 +48,12 @@ exports.create_an_application = async function (req, res) {
             ]
             },
            function(err, applications) {
-              if (!applications.length) {
+              if (applications.length != 0) {
               // set application properties
               req.body.status = "PENDING"
               req.body.actor = explorerId
+              console.log(req.body.actor)
+              console.log(req.body.trip)
 
               const newApplication = new Application(req.body);
               newApplication.save(function (error, application) {
@@ -60,12 +62,14 @@ exports.create_an_application = async function (req, res) {
                 } else{
                   // updated the application trip list
                   Trip.findOneAndUpdate({ _id: req.body.trip }, {"$push": {applications: application._id}}, { new: true }, function(err, result){
+                    console.log('Hola')
                     if(err){
                       res.send(err)
                     }
                     else{
                       // updated the application explorer list
                       Actor.findOneAndUpdate({ _id: explorerId}, {"$push": {applications: application._id}}, { new: true }, function(err, result){
+                        console.log('Hola')
                         if(err){
                           res.send(err)
                         }
@@ -253,7 +257,7 @@ exports.list_applications_from_auth_explorer = async function (req, res) {
   const explorerId = await authController.getUserId(idToken)
 
   if (status == '') {
-    Application.find({ actor: explorerId}, function (err, applications) {
+    Application.find({ actor: explorerId }, function (err, applications) {
       if (err) {
         res.status(400).send(err);
       } else {
@@ -261,7 +265,7 @@ exports.list_applications_from_auth_explorer = async function (req, res) {
       }
     });
   } else {
-    Application.find({ actor: explorerId}, { status: status}, function (err, applications) {
+    Application.find({ actor: explorerId }, { status: status }, function (err, applications) {
       if (err) {
         res.status(400).send(err);
       } else {

@@ -52,7 +52,7 @@ let computeDashboardJob
 
 exports.rebuildPeriod = function (req, res) {
   res.status(200)
-  console.log('Updating rebuild period. Request: period:' + req.query.rebuildPeriod)
+  // console.log('Updating rebuild period. Request: period:' + req.query.rebuildPeriod)
   
   // Get Rebuild Period
   rebuildPeriod = req.query.rebuildPeriod
@@ -71,7 +71,7 @@ exports.rebuildPeriod = function (req, res) {
 function createDashboardJob () {
   computeDashboardJob = new CronJob(rebuildPeriod, function () {
     const newDashboard = new Dashboard()
-    console.log('Cron job submitted. Rebuild period: ' + rebuildPeriod)
+    // console.log('Cron job submitted. Rebuild period: ' + rebuildPeriod)
     async.parallel([
 
       computeTripsByManager,
@@ -83,7 +83,7 @@ function createDashboardJob () {
       
     ], function (err, results) {
       if (err) {
-        console.log('Error computing dashboard: ' + err)
+        // console.log('Error computing dashboard: ' + err)
       } else {
 
         newDashboard.trip_stats_by_manager = results[0]
@@ -97,9 +97,9 @@ function createDashboardJob () {
 
         newDashboard.save(function (err, dashboard) {
           if (err) {
-            console.log('Error saving dashboard: ' + err)
+            // console.log('Error saving dashboard: ' + err)
           } else {
-            console.log('new Dashboard succesfully saved. Date: ' + new Date())
+            // console.log('new Dashboard succesfully saved. Date: ' + new Date())
           }
         })
 
