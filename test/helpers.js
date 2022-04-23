@@ -17,7 +17,7 @@ const actores_Iniciales = [
         "trips": ["6219fe03d6e229826747ebc7","6219fe03d6e229826747ebc8"],
         "applications": [],
         "search_criteria": [],
-        "sponshorships": [],
+        "sponsorships": [],
         "validated": false,
         "preferred_language": "Spanish"
         
@@ -35,7 +35,7 @@ const actores_Iniciales = [
         "trips": ["6219fe03d6e229826747ebc7","6219fe03d6e229826747ebc9"],
         "applications": [],
         "search_criteria": [],
-        "sponshorships": [],
+        "sponsorships": [],
         "validated": false,
         "preferred_language": "English"
     },
@@ -52,7 +52,7 @@ const actores_Iniciales = [
         "trips": ["6219fe03d6e229826747ebc7","6219fe03d6e229826747ebc9"],
         "applications": [],
         "search_criteria": [],
-        "sponshorships": [],
+        "sponsorships": [],
         "validated": false,
         "preferred_language": "English"
     }
@@ -131,7 +131,7 @@ const stages_iniciales = [
     }
 ]
 
-const sponshorships_iniciales = [
+const sponsorships_iniciales = [
     {
 
         "banner": "http://google.es",
@@ -175,5 +175,5 @@ const getSponsorships = async()=>{
 
 
 module.exports = {api,actores_Iniciales,trips_Iniciales,applications_Iniciales,
-                    stages_iniciales,sponshorships_iniciales,getTrips,getApplications,
+                    stages_iniciales,sponsorships_iniciales,getTrips,getApplications,
                 getActors,getSponsorships}
