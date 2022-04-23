@@ -19,7 +19,7 @@ exports.list_all_sponsorships = async function (req, res) {
       res.status(400).send(err);
     } else{
 
-      Sponsorship.find({actor: authSponsorId, is_paid : true}, function (err, sponsorships) {
+      Sponsorship.find({ actor: authSponsorId, is_paid: true }, function (err, sponsorships) {
 
         if(!sponsorships) {
           res.status(404).send("There are no paid sponsorships")
@@ -27,6 +27,7 @@ exports.list_all_sponsorships = async function (req, res) {
           if (err) {
             res.status(400).send(err)
           } else {
+            console.log(sponsorships)
             res.status(200).json(sponsorships)
           }
         }
