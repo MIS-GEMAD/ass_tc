@@ -56,7 +56,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"123456ABCDEFGH\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Antonio\",\r\n    \"surname\": \"García\",\r\n    \"email\": \"antoniogarcia1231@gmail.com\",\r\n    \"phone\": \"623154879\",\r\n    \"address\": \"Calle Resolana\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc8\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"raw": "{\r\n    \"password\": \"123456ABCDEFGH\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Antonio\",\r\n    \"surname\": \"García\",\r\n    \"email\": \"antoniogarcia1231@gmail.com\",\r\n    \"phone\": \"623154879\",\r\n    \"address\": \"Calle Resolana\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc8\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -107,7 +107,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"ANthony\",\r\n    \"surname\": \"Martial\",\r\n    \"email\": \"antonioMartial12311@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"ANthony\",\r\n    \"surname\": \"Martial\",\r\n    \"email\": \"antonioMartial12311@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -158,7 +158,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"fsdnfsnadlfsadnl\",\r\n    \"role\": [\r\n        \"SPONSOR\"\r\n    ],\r\n    \"name\": \"Bartolome\",\r\n    \"surname\": \"Alarcon\",\r\n    \"email\": \"Bartolomealargocno111@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Sevilla\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebcd\"],\r\n    \"applications\": [\"6219fe03d6e229826747ebe3\",\"6219fe03d6e229826747ebe4\",\"6219fe03d6e229826747ebeb\"],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"raw": "{\r\n    \"password\": \"fsdnfsnadlfsadnl\",\r\n    \"role\": [\r\n        \"SPONSOR\"\r\n    ],\r\n    \"name\": \"Bartolome\",\r\n    \"surname\": \"Alarcon\",\r\n    \"email\": \"Bartolomealargocno111@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Sevilla\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebcd\"],\r\n    \"applications\": [\"6219fe03d6e229826747ebe3\",\"6219fe03d6e229826747ebe4\",\"6219fe03d6e229826747ebeb\"],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -209,7 +209,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"MANAGER\"\r\n    ],\r\n    \"name\": \"Lolo\",\r\n    \"surname\": \"Herrero\",\r\n    \"email\": \"Lolohererr11o@gmail.com\",\r\n    \"phone\": \"62315656\",\r\n    \"address\": \"Calle Barcelona\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"MANAGER\"\r\n    ],\r\n    \"name\": \"Lolo\",\r\n    \"surname\": \"Herrero\",\r\n    \"email\": \"Lolohererr11o@gmail.com\",\r\n    \"phone\": \"62315656\",\r\n    \"address\": \"Calle Barcelona\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"English\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -260,7 +260,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"fkasfnasffsdadnfdasf\",\r\n    \"role\": [\r\n        \"ADMINISTRATOR\"\r\n    ],\r\n    \"name\": \"alvaro\",\r\n    \"surname\": \"trujillo\",\r\n    \"email\": \"alvarotrujillo11@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Alcosa\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"raw": "{\r\n    \"password\": \"fkasfnasffsdadnfdasf\",\r\n    \"role\": [\r\n        \"ADMINISTRATOR\"\r\n    ],\r\n    \"name\": \"alvaro\",\r\n    \"surname\": \"trujillo\",\r\n    \"email\": \"alvarotrujillo11@gmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Alcosa\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -311,7 +311,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Manue\",\r\n    \"surname\": \"Garciaa\",\r\n    \"email\": \"elmanugmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponshorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
+							"raw": "{\r\n    \"password\": \"kdfnaosnfdspa\",\r\n    \"role\": [\r\n        \"EXPLORER\"\r\n    ],\r\n    \"name\": \"Manue\",\r\n    \"surname\": \"Garciaa\",\r\n    \"email\": \"elmanugmail.com\",\r\n    \"phone\": \"623154881\",\r\n    \"address\": \"Calle Torreblanca\",\r\n    \"trips\": [\"6219fe03d6e229826747ebc7\",\"6219fe03d6e229826747ebc9\"],\r\n    \"applications\": [],\r\n    \"search_criteria\": [],\r\n    \"sponsorships\": [],\r\n    \"validated\": false,\r\n    \"preferred_language\": \"Spanish\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

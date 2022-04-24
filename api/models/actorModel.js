@@ -46,7 +46,7 @@ const ActorSchema = new Schema(
     ban: {
       type: Boolean
     },
-    sponshorships: [{
+    sponsorships: [{
       type: Schema.Types.ObjectId,
       ref: 'Sponsorship',
     }],

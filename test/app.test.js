@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 //Tests de Integración con Jest y supertest
 const mongoose= require('mongoose');
 const {api,actores_Iniciales,trips_Iniciales,applications_Iniciales,
-  stages_iniciales,sponshorships_iniciales,getTrips,getApplications,
+  stages_iniciales,sponsorships_iniciales,getTrips,getApplications,
 getActors,getSponsorships} = require ('./helpers');
 
 const Actor= require('../api/models/actorModel');
@@ -69,11 +69,11 @@ beforeEach(async()=>{
   await stage3.save();
   
 
-  const sponsorship1= new Sponsorship(sponshorships_iniciales[0]);
+  const sponsorship1= new Sponsorship(sponsorships_iniciales[0]);
   await sponsorship1.save();
-  const sponsorship2= new Sponsorship(sponshorships_iniciales[1]);
+  const sponsorship2= new Sponsorship(sponsorships_iniciales[1]);
   await sponsorship2.save();
-  const sponsorship3= new Sponsorship(sponshorships_iniciales[2]);
+  const sponsorship3= new Sponsorship(sponsorships_iniciales[2]);
   await sponsorship3.save();
 
 
@@ -133,7 +133,7 @@ describe('ACTORS', () => {
         "trips": ["6219fe03d6e229826747ebc7","6219fe03d6e229826747ebc8"],
         "applications": [],
         "search_criteria": [],
-        "sponshorships": [],
+        "sponsorships": [],
         "validated": false,
         "preferred_language": "Spanish"
         
