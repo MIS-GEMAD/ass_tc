@@ -151,6 +151,7 @@ exports.store_json_fs = function (req, res) {
           if (collection == 'sponsorships') {
             data.trip = mongoose.Types.ObjectId(data.trip)
             data.actor = mongoose.Types.ObjectId(data.actor)
+            data.is_paid = (data.is_paid === 'true');
           }
 
           if (collection == 'finders') {

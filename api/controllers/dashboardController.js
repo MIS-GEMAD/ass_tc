@@ -90,7 +90,7 @@ function createDashboardJob () {
         newDashboard.application_by_trip = results[1]
         newDashboard.trip_price_stats = results[2]
         newDashboard.ratio_applications_by_status = results[3]
-        newDashboard.average_price_in_finders = results[4],
+        newDashboard.average_in_finders = results[4],
         newDashboard.top_10_words_in_finders = results[5],
 
         newDashboard.rebuildPeriod = rebuildPeriod
