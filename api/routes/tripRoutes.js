@@ -34,11 +34,6 @@ module.exports = function (app) {
   app.route('/trip/:tripId/applications')
     .get(authController.verifyUser(['MANAGER']), trip.list_trip_applications)
 
-  /*
-
-
   app.route('/trips/:tripId/random-banner')
     .get(trip.select_random_banner)
-
-  */
 }
