@@ -30,7 +30,8 @@ app.use(bodyParser.json());
 
 // control de CORS
 app.use(cors({
-  origin: '*'
+  origin: '*',
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }))
 
 // para poder usar la API de firebase
