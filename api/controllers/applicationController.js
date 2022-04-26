@@ -137,7 +137,7 @@ exports.cancel_an_application = async function (req, res) {
 
         if (
           application.status === "PENDING" ||
-          application.status === "ACCEPTED"
+          application.status === "DUE"
         ) {
           Application.findOneAndUpdate(
             { _id: req.params.applicationId },
@@ -152,7 +152,7 @@ exports.cancel_an_application = async function (req, res) {
             }
           );
         } else {
-          res.status(400).send({ message: 'To cancel an application, must be pending or accepted' })
+          res.status(400).send({ message: 'To cancel an application, must be pending or due' })
         }
 
       }
