@@ -29,7 +29,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // control de CORS
-app.use(cors())
+app.use(cors({
+  origin: 'http://localhost:4200/'
+}))
 
 // para poder usar la API de firebase
 admin.initializeApp({
