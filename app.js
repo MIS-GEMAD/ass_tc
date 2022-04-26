@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 
 // control de CORS
 app.use(cors({
-  origin: 'http://localhost:4200/'
+  origin: '*'
 }))
 
 // para poder usar la API de firebase
