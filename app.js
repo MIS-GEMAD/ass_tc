@@ -1,9 +1,7 @@
-
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8080;
 const mongoose = require("mongoose");
-const cors = require('cors');
 
 // creación de los esquemas en MongoDB
 // nota: aunque no se usen las variables, los "requires" son obligatorios
@@ -29,10 +27,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // control de CORS
-app.use(cors({
-  origin: '*',
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}))
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization, Content-Length, idToken') // ojo, que si metemos un parametro propio por la cabecera hay que declararlo aquí para que no de el error CORS
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,UPDATE,DELETE,PATCH,OPTIONS,HEAD')
+  next()
+})
+
+// {
+//   origin: '*',
+//   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+// }
 
 // para poder usar la API de firebase
 admin.initializeApp({
