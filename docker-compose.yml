@@ -26,6 +26,8 @@ services:
   mongodb:
     image: mongo:latest
     container_name: mongodb
+    volumes:
+      - "datavolume:/data/db"
     restart: always
     environment:
       MONGO_INITDB_DATABASE: ACME_Explorer
@@ -33,6 +35,10 @@ services:
       - "27017:27017"
     networks:
       - ass
+
+
+volumes:
+  datavolume:
 
 networks:
   ass:
