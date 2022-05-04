@@ -43,7 +43,6 @@ exports.verifyUser = function (requiredRoles) {
           res.status(401) // an access token isn’t provided, or is invalid
           res.json({ message: 'No actor found with the provided email as username', error: err })
         } else {
-
           let isAuth = false
           for (let i = 0; i < requiredRoles.length; i++) {
             for (let j = 0; j < actor.role.length; j++) {
@@ -55,7 +54,7 @@ exports.verifyUser = function (requiredRoles) {
               }
             }
           }
-          
+
           if (isAuth) {
             return callback(null, actor)
           } else {
@@ -65,8 +64,6 @@ exports.verifyUser = function (requiredRoles) {
         }
       })
     }).catch(function (err) {
-      // Handle error
-      console.log('Error en autenticación: ' + err)
       res.status(403) // an access token is valid, but requires more privileges
       res.json({ message: 'The token is invalid', error: err })
     })

@@ -124,7 +124,6 @@ exports.delete_a_trip = async function (req, res) {
 
                   // delete all stages
                   Stage.deleteMany({ trip: req.params.tripId }, function(err){
-                    console.log("deleting stages from trip " + req.params.tripId )
                     res.status(204).send ({ message: "Trip successfully deleted" });
                   })
 
@@ -211,7 +210,6 @@ exports.select_random_banner = function (req, res) {
         res.status(404).send("Trip not found");
       } else {
         Sponsorship.find({trip: trip._id.toString(), $set: { is_paid: true }}, function (err, sponsorships) {
-          console.log(err,sponsorships)
           if (err) {
             res.status(400).send(err);
           } else {

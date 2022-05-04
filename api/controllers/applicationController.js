@@ -243,7 +243,6 @@ exports.due_an_application = async function (req, res) {
 };
 
 exports.list_applications_from_auth_explorer = async function (req, res) {
-
   const status = req.query.status ? req.query.status.toUpperCase() : '';
 
   // get auth explorer
@@ -267,8 +266,6 @@ exports.list_applications_from_auth_explorer = async function (req, res) {
       }
     });
   }
-
-
 }
 
 exports.pay_a_trip = async function (req, res) {
@@ -285,9 +282,7 @@ exports.pay_a_trip = async function (req, res) {
      if(authExplorerId != applicationExplorerId){
       res.status(401).send({ message: 'This explorer does not have permissions to pay this trip'})
      } else {
-
       if(application.status == "DUE"){
-
         Application.findOneAndUpdate(
           { _id: req.params.applicationId },
           { status: "ACCEPTED" },
@@ -300,14 +295,9 @@ exports.pay_a_trip = async function (req, res) {
             }
           }
         );
-
       } else{
         res.status(401).send({ message: 'The application must be in DUE status'})
       }
-
      }
-
-    
   });
-
 }
