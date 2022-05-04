@@ -19,8 +19,8 @@ exports.list_all_actors = async function(req, res) {
 
 exports.create_an_actor = function (req, res) {
   const newActor = new Actor(req.body)
-  if (req.body.role == 'ADMINISTRATOR' || req.body.role == 'MANAGER') {
-    res.status(400).send({ err: 'An administrator or a manager cannot be registered' });
+  if (req.body.role == 'ADMINISTRATOR') {
+    res.status(400).send({ err: 'An administrator cannot be registered' });
   } else {
     newActor.save(function (err, actor) {
       if (err) {
