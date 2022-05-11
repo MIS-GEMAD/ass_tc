@@ -83,13 +83,7 @@ mongoose.connection.on("open", function () {
   app.listen(port, function () {
     console.log("ACME-Explorer RESTful API server started on: " + port);
   });
-});
 
-mongoose.connection.on("error", function (err) {
-  console.error("DB init error " + err);
-});
-
-mongoose.connection.on("all", function () {
   // save inital configuration variable
   var configuration = new Configuration({
     flat_rate: 0,
@@ -97,18 +91,13 @@ mongoose.connection.on("all", function () {
     max_finder_result: 10
   })
   
-  var cube = new Cube({
-    money_in_period: 0,
-    explorers_in_period: []
-  })
-  
   mongoose.connection.dropCollection('configurations')
-  mongoose.connection.dropCollection('cubes')
-  
-  configuration.save()
-  
-  cube.save()
-})
+    .then(configuration.save())
+});
+
+mongoose.connection.on("error", function (err) {
+  console.error("DB init error " + err);
+});
 
 // mongoose.connection.dropDatabase(function(err, result) {console.log(err,result)});
 

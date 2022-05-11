@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const Finder = mongoose.model("Finder");
 
+const Actor = mongoose.model("Actor");
+
 const Configuration = mongoose.model("Configuration");
 
 const authController = require('../controllers/authController')
@@ -23,10 +25,30 @@ exports.create_a_finder_criteria = async function (req, res) {
     if (error) {
       res.status(400).send(error);
     } else {
-      res.status(200).json(finder);
+      Actor.findOneAndUpdate({ _id: finder.actor._id }, {"$push": {finders: finder._id}}, { new: true }, function(err, result){
+        if(err){
+          res.send(err)
+        }
+        else{
+          res.status(201).json(finder);
+        }
+      })
     }
   });
 };
+
+exports.list_finders_from_auth_explorer = async function (req, res) {
+  const idToken = req.header('idToken')
+  const explorerId = await authController.getUserId(idToken)
+
+  Finder.find({ actor: explorerId, trips: { $exists: true, $not: { $size: 0 } } } , function (err, finders) {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).json(finders);
+    }
+  });
+}
 
 exports.flush_finder_criterias = function (req, res) {
   Configuration.find({}, function (err, configurations) {
