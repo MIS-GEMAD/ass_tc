@@ -11,6 +11,9 @@ module.exports = function (app) {
   app.route('/finder/owns')
     .get(authController.verifyUser(['EXPLORER']), finder.list_finders_from_auth_explorer)
 
+  app.route('/finder/last')
+    .get(authController.verifyUser(['EXPLORER']), finder.list_last_finder_from_auth_explorer)
+
   app.route('/finder/flush')
     .put(authController.verifyUser(['ADMINISTRATOR']), finder.flush_finder_criterias)
 
