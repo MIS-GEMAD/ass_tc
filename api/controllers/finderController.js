@@ -41,7 +41,7 @@ exports.list_last_finder_from_auth_explorer = async function (req, res) {
   const idToken = req.header('idToken')
   const explorerId = await authController.getUserId(idToken)
 
-  Finder.find({ actor: explorerId, trips: { $exists: true, $not: { $size: 0 } }}).sort({moment: -1}).exec(function (err, finders) {
+  Finder.find({ actor: explorerId, trips: { $exists: true, $not: { $size: 0 } }}).sort({moment: 1}).exec(function (err, finders) {
     if (err) {
       res.status(400).send(err);
     } else {
