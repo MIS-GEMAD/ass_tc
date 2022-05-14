@@ -82,14 +82,21 @@ TripSchema.pre('save', function(callback) {
   const trip = this
 
   const date = new Date()
-  const generatedTicker = `${date.getYear().toString()}${date
-    .getMonth()
-    .toString()}${date.getDay().toString()}-${String.fromCharCode(
+
+  const year = date.getFullYear().toString() % 100
+
+  const day = ('0' + date.getDay().toString()).slice(-2)
+
+  const month = ('0' + date.getMonth().toString()).slice(-2)
+
+  const generatedTicker = `${year}${month}${day}-${String.fromCharCode(
     65 + Math.floor(Math.random() * 26))}${String.fromCharCode(
       65 + Math.floor(Math.random() * 26))}${String.fromCharCode(
         65 + Math.floor(Math.random() * 26))}${String.fromCharCode(
           65 + Math.floor(Math.random() * 26))}`
   trip.ticker = generatedTicker
+
+  console.log(generatedTicker)
 
   callback()
 })
