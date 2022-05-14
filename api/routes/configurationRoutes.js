@@ -14,4 +14,6 @@ module.exports = function (app) {
   app.route('/finder/result')
     .put(authController.verifyUser(['ADMINISTRATOR']), configuration.updates_finder_result)
 
+  app.route('/configurations')
+    .get(configuration.get_configuration)
 }
