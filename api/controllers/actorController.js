@@ -9,7 +9,7 @@ const authController = require('./authController')
 
 exports.list_all_actors = async function(req, res) {
   try{
-    const actors = await Actor.find();
+    const actors = await Actor.find({role: {$ne: 'ADMINISTRATOR'}});
     return res.status(200).json(actors);
   
   }catch(err){
