@@ -56,7 +56,7 @@ const TripSchema = new Schema(
     },
     is_published: {
       type: Boolean,
-      default: false
+      default: true
     },
     stages: [{
       type: Schema.Types.ObjectId,
@@ -95,8 +95,6 @@ TripSchema.pre('save', function(callback) {
         65 + Math.floor(Math.random() * 26))}${String.fromCharCode(
           65 + Math.floor(Math.random() * 26))}`
   trip.ticker = generatedTicker
-
-  console.log(generatedTicker)
 
   callback()
 })

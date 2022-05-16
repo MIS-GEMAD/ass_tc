@@ -42,8 +42,6 @@ exports.create_a_trip = async function (req, res) {
           res.status(201).json(trip);
         }
       })
-
-      
     }
   });
 };
@@ -109,7 +107,7 @@ exports.delete_a_trip = async function (req, res) {
       if(authManagerId != tripManagerId){
         res.status(401).send({ message: 'This manager does not have permissions to delete this trip'})
       } else {
-        if( !trip.is_published ) {
+        // if( !trip.is_published ) {
           Trip.deleteOne({ _id: req.params.tripId }, function (err, trip) {
             if (err) {
               res.status(400).send(err);
@@ -132,9 +130,9 @@ exports.delete_a_trip = async function (req, res) {
 
             }
           });
-        } else {
-          res.status(400).send({ err: 'Cannot delete a published trip' });
-        }
+        // } else {
+        //   res.status(400).send({ err: 'Cannot delete a published trip' });
+        // }
       }
 
       

@@ -47,7 +47,7 @@ exports.create_an_application = async function (req, res) {
             ]
             },
            function(err, applications) {
-              if (applications.length != 0) {
+              if (applications.length == 0) {
               // set application properties
               req.body.status = "PENDING"
               req.body.actor = explorerId
@@ -58,18 +58,20 @@ exports.create_an_application = async function (req, res) {
                   res.status(400).send(error);
                 } else{
                   // updated the application trip list
-                  Trip.findOneAndUpdate({ _id: req.body.trip }, {"$push": {applications: application._id}}, { new: true }, function(err, result){
+                  Trip.findOneAndUpdate({ _id: req.body.trip }, {"$push": {applications: application._id}}, { new: true }, function(err, trip){
                     if(err){
                       res.send(err)
                     }
                     else{
                       // updated the application explorer list
-                      Actor.findOneAndUpdate({ _id: explorerId}, {"$push": {applications: application._id}}, { new: true }, function(err, result){
+                      Actor.findOneAndUpdate({ _id: explorerId}, {"$push": {applications: application._id}}, { new: true }, function(err, actor){
                         if(err){
                           res.send(err)
                         }
                         else{
                           res.status(201).json(application);
+                          console.log(application)
+                          console.log(trip)
                         }
                       })
 
